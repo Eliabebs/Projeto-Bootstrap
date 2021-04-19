@@ -1,0 +1,247 @@
+
+/* css reset */ 
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, 
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+}
+
+
+ol, ul {
+	list-style: none;
+}
+
+h1{
+    text-align: center;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
+
+/* fim de reset */ 
+#container{ 
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+#container h1{
+    font-family: cursive;
+}
+
+/* inicio da estiliação do header e navbar */ 
+
+nav{
+    background: #660066;
+    position:absolute;
+}
+.collapse a:hover{ 
+    color: var(--verde);
+}
+:root{
+    --principal: #660066;
+    --principal_medio:#7A007A;
+    --principal_claro:#A300A3;
+    --verde:#4CB944;
+    --verde_medio:#32762D;
+    --verde_escuro:#255922;
+    }
+
+
+/* fim da estiliação do header e navbar */ 
+
+/* inicio estilo container */ 
+#container{ 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.h1Servicos{ 
+    margin-top: 50px;
+}
+.servicos{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px;
+
+}
+.servicos img{ 
+    width: 150px;
+} 
+
+.delivery { 
+    margin: 50px;
+}
+.consumo { 
+    margin: 50px;
+}
+
+.produtos{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.acaiCremes{ 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.h2AcaiCremes h2{ 
+   width: 300px;
+    text-align: center;
+}
+.h2AcaiCremes, .h2Mix{
+    margin: 50px;
+}
+
+.acai{ 
+    display: flex;
+    height: 400px;
+    width: 300px;
+    margin: 50px;
+    font-size: 1.5em;
+    align-items: center;
+    overflow: auto;
+    text-align: center;
+    padding: 20px;
+    flex-wrap: wrap;
+
+}
+.mix{ 
+    display: flex;
+    height: 700px;
+    width: 300px;
+    margin: 50px;
+    font-size: 1.5em;
+    align-items: center;
+    overflow: scroll;
+    text-align: left;
+   flex-wrap: wrap;
+
+
+}
+.coberturas{ 
+    height: 700px;
+    width: 300px;
+    margin: 50px;
+    font-size: 1.5em;
+    align-items: center;
+    overflow: scroll;
+    text-align: left;
+  
+}
+.frutas{ 
+    display: flex;
+    height: 400px;
+    width: 350px;
+    margin: 50px;
+    font-size: 1.5em;
+    align-items: center;
+    overflow: auto;
+    text-align: left;
+    padding: 20px;
+}
+
+.h2AcaiCremes, .h2Mix h2::before{ 
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: purple;
+}
+
+/* fim estilo container */ 
+/*Inicio do Footer*/
+
+.footer{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: purple;
+    font-weight:400;
+    color: white;
+}
+.informacoes{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 0,5em;
+ }
+.sociais{ 
+
+margin: 50px;
+
+}
+
+.data{ 
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Fim do Footer */ 
+
+
+/* Estilização do botão back to top */ 
+
+.back-to-top {
+    background-color: purple;
+    border-radius: 65px;
+    bottom: 14px;
+    box-shadow: 2px 3px 19px -2px rgba(0, 0, 0, .75);
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    position: fixed;
+    right: 22px;
+    width: 50px;
+    z-index: 3;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 15px;
+  &::after {
+      content: '▲';
+      display: flex;
+      justify-content: center;
+      padding-left: 1px;
+      padding-top: 10px;
+    }
+  .back-to-top a:hover{ 
+      text-decoration: none;
+      color: green;
+  }
+
+/* fim do botão back to top */ 
+

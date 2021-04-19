@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sejaUmParceiro.css">
+    <link rel="sortcut icon" href="img/logoJanela2.png" type="image/png" />
+    <title>Seleto Açaí</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('body').scroll(function () {
+                if ($(this).scrollTop() < 220) {
+                    $('.back-to-top').css('display', 'none');
+                } else {
+                    $('.back-to-top').css('display', 'block');
+                }
+            });
+            $('.back-to-top').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 1700);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav id="menu-nav" class="navbar navbar-expand-sm navbar-light">
+            <!--Logo-->
+            <a class="navbar-brand" href="index.html"><img src="img/logoSeletoFinal.png" alt="logomarca"
+                    style="max-width: 100px;"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navegacao3">
+                <!--data-toggle="collapse" faz aparecer e desaparecer o icone / data-target="#navegacao" vai abrir a navegação no não esquecer de abrir id aqui pra chamar-->
+                <span class="navbar-toggler-icon"></span>
+                <!--menu hamburguer-->
+            </button>
+            <!--Navegação-->
+            <div id="navegacao3" class="collapse navbar-collapse ">
+                <!--class="collapse" faz esconder o conteudo q esta dentro da div collapse-->
+                <ul class="navbar-nav ml-auto  ">
+                    <!--ml-auto -> margin left automatica-->
+                    <li class="nav-item lista-menu">
+                        <a class="nav-link text-white " href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="quemSomos.html">Sobre
+                            nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="servicos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="sejaUmParceiro.html">Seja um Parceiro</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <a class="back-to-top" href="#">^</a>
+    <!-- Inicio de Conteúdo da Página-->
+    <div id="container">
+        <section class="h1FaleConosco">
+            <h1>Tem interesse em fazer uma parceria com a Seleto?</h1>
+        </section>
+        <section class="pFaleConosco">
+            <p>Preencha este formulário, e em breve retornaremos o contato:</p>
+        </section>
+        <section class="divFormulario">
+            <div>
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationServer01">Primeiro nome</label>
+                            <input type="text" class="form-control" id="validationServer01" placeholder="Nome" required>
+                            <div class="valid-feedback">
+                                Tudo certo!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationServer02">Sobrenome</label>
+                            <input type="text" class="form-control" id="validationServer02" placeholder="Sobrenome"
+                                required>
+                            <div class="valid-feedback">
+                                Tudo certo!
+                            </div>
+                        </div>
+                        <div class="validaCNPJ"> 
+                            <label for="validCNPJ">CNPJ:</label>
+                            <input type="text" name="cnpj" id="cnpj" onkeyup="FormataCnpj(this,event)"
+                                onblur="if(!validarCNPJ(this.value)){alert('CNPJ Informado é inválido'); this.value='';}"
+                                maxlength="18" class="form-control input-md" ng-model="cadastro.cnpj" required>
+
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationServer03">Cidade</label>
+                            <input type="text" class="form-control " id="validationServer03" placeholder="Cidade"
+                                required>
+                            <div class="invalid-feedback">
+                                Por favor, informe uma cidade válida.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationServer04">Estado</label>
+                            <input type="text" class="form-control" id="validationServer04" placeholder="Estado"
+                                required>
+                            <div class="invalid-feedback">
+                                Por favor, informe um estado válido.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationServer05">CEP</label>
+                            <input type="text" class="form-control" id="validationServer05" placeholder="CEP" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe um CEP válido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite seu email">
+                        <small id="emailHelp" class="form-text text-muted">Nós nunca iremos compartilhar seu email com ninguém :).</small>
+                      </div>
+                    <div class="mb-3">
+                        <label for="validationTextarea">Mensagem</label>
+                        <textarea class="form-control" id="validationTextarea" placeholder="Digite aqui sua mensagem"
+                            required></textarea>
+                        <div class="invalid-feedback">
+                            Please enter a message in the textarea.
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+    </div> <!-- Fim de conteúdo da Página-->
+    <footer class="footer">
+        <div class="informacoes">
+            <p>Desenvolvido por SoulCode Academy</p>
+            <p>Todos os direitos reservados</p>
+        </div>
+        <div id="data-hora" class="data"></div>
+        <div class="sociais">
+            <a href="https://www.facebook.com/seletoacai/photos/?ref=page_internal"><img src="img/facebookreal.png"
+                    alt="iconFacebook"></a>
+
+            <a href="https://www.instagram.com/seletoacai/"><img src="img/instagramreal.png" alt="iconInstagram"></a>
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
